@@ -1,0 +1,46 @@
+<?xml version = "1.0"?>
+<questions>
+
+   <question quesno= "1" body="Выберите стихию: ">
+      <thunderClan>Огонь</thunderClan>
+      <riverClan>Вода</riverClan>
+      <skyClan>Воздух</skyClan>
+      <windClan>Земля</windClan>
+      <shadowClan>Ночь</shadowClan>
+      <kittyPet> Ээээмммм... а есть стихия домашнего уюта?</kittyPet>
+      <tribeofFallingWater>Лед</tribeofFallingWater>
+      <bloodClan>Яд</bloodClan>
+      <tramp>Не хочу выбирать.Во мне сочетаются все стихии</tramp>
+      
+      
+      
+   </question>
+
+   <question quesno= "2" body="Выберите стихию: ">
+      <thunderClan>Огонь</thunderClan>
+      <riverClan>Вода</riverClan>
+      <skyClan>Воздух</skyClan>
+      <windClan>Земля</windClan>
+      <shadowClan>Ночь</shadowClan>
+      <kittyPet> Ээээмммм... а есть стихия домашнего уюта?</kittyPet>
+   </question>
+
+   <question quesno= "3" body="Выберите стихию: ">
+      <thunderClan>Огонь</thunderClan>
+      <riverClan>Вода</riverClan>
+      <skyClan>Воздух</skyClan>
+      <windClan>Земля</windClan>
+      <shadowClan>Ночь</shadowClan>
+      <kittyPet> Ээээмммм... а есть стихия домашнего уюта?</kittyPet>
+   </question>
+
+   <question quesno= "4" body="Выберите стихию: ">
+      <thunderClan>Огонь</thunderClan>
+      <riverClan>Вода</riverClan>
+      <skyClan>Воздух</skyClan>
+      <windClan>Земля</windClan>
+      <shadowClan>Ночь</shadowClan>
+      <kittyPet> Ээээмммм... а есть стихия домашнего уюта?</kittyPet>
+   </question>
+
+</questions>

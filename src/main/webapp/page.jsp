@@ -5,6 +5,6 @@
         <title>title</title>
      </head>
      <body>
-          <p>Hello, dear ${user.name} ${user.surname}!</p>
+          <p>Hello, dear ${user.name} ${user.surName} ${user.kittyPet}!</p>
      </body>
 </html>

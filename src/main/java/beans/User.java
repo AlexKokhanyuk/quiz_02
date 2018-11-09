@@ -5,15 +5,24 @@ package beans;
  * on 26.10.2018 15:36
  */
 public class User {
-    int thunderClan;
-    int riverClan;
-    int skyClan;
-    int windClan;
-    int shadowClan;
-    int Pers06;
-    int Pers07;
-    int Pers08;
-    int kittyPet;
+
+
+    private String name;
+    private String surName;
+    private int thunderClan;
+    private int riverClan;
+    private int skyClan;
+    private int windClan;
+    private int shadowClan;
+    private int Pers06;
+    private int Pers07;
+    private int Pers08;
+
+    public int getKittyPet() {
+        return kittyPet;
+    }
+
+    private int kittyPet;
 
 
 
@@ -50,7 +59,23 @@ public class User {
         skyClan++;
     }
 
+    public String getName() {
+        return name;
+    }
 
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
 
 
 
