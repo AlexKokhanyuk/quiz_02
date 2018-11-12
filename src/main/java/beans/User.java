@@ -9,42 +9,44 @@ public class User {
 
     private String name;
     private String surName;
-    private int thunderClan;
-    private int riverClan;
-    private int skyClan;
-    private int windClan;
-    private int shadowClan;
+    private int countThunderClan;
+    private int countRiverClan;
+    private int countSkyClan;
+    private int countWindClan;
+    private int countShadowClan;
     private int Pers06;
     private int Pers07;
     private int Pers08;
+    private int countKittyPet;
+
 
     public int getKittyPet() {
-        return kittyPet;
+        return countKittyPet;
     }
 
-    private int kittyPet;
+
 
 
 
     public void incrThunderClan(){
-        thunderClan++;
+        countThunderClan++;
     }
 
     public void incrRiverClan(){
-        riverClan++;
+        countRiverClan++;
     }
 
     public void incrWindClan(){
-        windClan++;
+        countWindClan++;
     }
 
     public void incrShadowClan(){
-        shadowClan++;
+        countShadowClan++;
     }
 
 
     public void incrKittyPet(){
-        kittyPet++;
+        countKittyPet++;
     }
 
     public void incrPers06(){
@@ -56,7 +58,7 @@ public class User {
 
 
     public void incrSkyClan(){
-        skyClan++;
+        countSkyClan++;
     }
 
     public String getName() {
@@ -83,14 +85,14 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "thunderClan=" + thunderClan +
-                ", riverClan=" + riverClan +
-                ", skyClan=" + skyClan +
-                ", windClan=" + windClan +
-                ", shadowClan=" + shadowClan +
+                "thunderClan=" + countThunderClan +
+                ", riverClan=" + countRiverClan +
+                ", skyClan=" + countSkyClan +
+                ", windClan=" + countWindClan +
+                ", shadowClan=" + countShadowClan +
                 ", Pers06=" + Pers06 +
                 ", Pers07=" + Pers07 +
-                ", kittyPet=" + kittyPet +
+                ", kittyPet=" + countKittyPet +
                 '}';
     }
 }
