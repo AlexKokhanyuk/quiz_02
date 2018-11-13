@@ -1,3 +1,4 @@
+import beans.Question;
 import beans.User;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -7,6 +8,8 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -18,7 +21,7 @@ public class Quiz {
         User user = new beans.User();
         Scanner scan = new Scanner(System.in);
         try {
-            File inputFile = new File("questions.xml");
+            File inputFile = new File("src\\main\\resources\\questions.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
@@ -28,48 +31,102 @@ public class Quiz {
             NodeList nList = doc.getElementsByTagName("question");
 //            System.out.println("----------------------------");
 
+
+            List<Question> questionList=new ArrayList<Question>();
+
             for (int temp = 0; temp < nList.getLength(); temp++) {
+                Question question=new Question();
                 Node nNode = nList.item(temp);
 //                System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+
+
                     Element eElement = (Element) nNode;
                     System.out.println("Question number : "
                             + eElement.getAttribute("quesno"));
 
+                    question.setQuesno(Integer.parseInt(eElement.getAttribute("quesno")));
+
+
+
                     System.out.println("Question : "
                             + eElement.getAttribute("body"));
+                    question.setBody(eElement.getAttribute("body"));
 
                     System.out.println("1 : "
                             + eElement
                             .getElementsByTagName("thunderClan")
                             .item(0)
                             .getTextContent());
+                    question.setThunderClan(eElement
+                            .getElementsByTagName("thunderClan")
+                            .item(0)
+                            .getTextContent());
+
                     System.out.println("2 : "
                             + eElement
                             .getElementsByTagName("riverClan")
                             .item(0)
                             .getTextContent());
+                    question.setRiverClan(eElement
+                            .getElementsByTagName("riverClan")
+                            .item(0)
+                            .getTextContent());
+
                     System.out.println("3 : "
                             + eElement
                             .getElementsByTagName("skyClan")
                             .item(0)
                             .getTextContent());
+                    question.setSkyClan(eElement
+                            .getElementsByTagName("skyClan")
+                            .item(0)
+                            .getTextContent());
+
                     System.out.println("4 : "
                             + eElement
                             .getElementsByTagName("windClan")
                             .item(0)
                             .getTextContent());
+                    question.setWindClan(eElement
+                            .getElementsByTagName("windClan")
+                            .item(0)
+                            .getTextContent());
+
                     System.out.println("5 : "
                             + eElement
                             .getElementsByTagName("shadowClan")
                             .item(0)
                             .getTextContent());
+                    question.setShadowClan( eElement
+                            .getElementsByTagName("shadowClan")
+                            .item(0)
+                            .getTextContent());
+
                     System.out.println("6 : "
                             + eElement
                             .getElementsByTagName("kittyPet")
                             .item(0)
                             .getTextContent());
+                    question.setKittyPet(eElement
+                            .getElementsByTagName("kittyPet")
+                            .item(0)
+                            .getTextContent());
+
+//                    System.out.println("7 : "
+//                            + eElement
+//                            .getElementsByTagName("troubleOfFallingWater")
+//                            .item(0)
+//                            .getTextContent());
+//                    question.setKittyPet(eElement
+//                            .getElementsByTagName("troubleOfFallingWater")
+//                            .item(0)
+//                            .getTextContent());
+
+
+
 
                     int answ = scan.nextInt();
 
@@ -107,7 +164,10 @@ public class Quiz {
 
                     }
                 }
+                questionList.add(question);
+
             }
+            System.out.println(questionList.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
